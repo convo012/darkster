@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Darkester 2.0 - Services</title>
+    <style>
+        /* General body styling */
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #1b1b2f;
+            color: #e0e0e0;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        /* Navigation styling */
+        nav {
+            background-color: white;
+            color: black;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: relative;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        nav .logo {
+            font-family: 'Arial', sans-serif;
+            font-size: 20px;
+            font-weight: bold;
+            margin: 0;
+        }
+
+        /* Hamburger menu styling */
+        .menu-icon {
+            display: flex;
+            flex-direction: column;
+            cursor: pointer;
+            align-items: center;
+        }
+
+        .menu-icon div {
+            width: 25px;
+            height: 3px;
+            background-color: black;
+            margin: 4px 0;
+            transition: all 0.3s ease;
+        }
+
+        .menu-icon:hover div {
+            background-color: #007BFF;
+        }
+
+        /* Navigation menu styling */
+        #nav-menu {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+        }
+
+        #nav-menu li {
+            margin-left: 20px;
+        }
+
+        #nav-menu li a {
+            color: black;
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        #nav-menu li a:hover {
+            color: #007BFF;
+        }
+
+        /* Responsive Menu for Desktop */
+        @media (min-width: 768px) {
+            /* Hide hamburger menu on desktop */
+            .menu-icon {
+                display: none;
+            }
+
+            /* Display navigation menu horizontally on desktop */
+            #nav-menu {
+                display: flex !important;
+                flex-direction: row;
+                justify-content: flex-end;
+                position: static;
+                background: none;
+                box-shadow: none;
+            }
+
+            #nav-menu li {
+                margin-left: 20px;
+            }
+
+            #nav-menu li a {
+                padding: 10px 20px;
+                border: none;
+            }
+
+            #nav-menu li a:hover {
+                background-color: transparent;
+                color: #007bff;
+            }
+        }
+
+        /* Responsive Menu for Mobile */
+        @media (max-width: 767px) {
+            /* Initially hide the navigation menu on mobile */
+            #nav-menu {
+                display: none;
+                flex-direction: column;
+                position: absolute;
+                background-color: white;
+                top: 60px;
+                left: 0;
+                width: 100%;
+                text-align: left;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            }
+
+            /* Show the menu when active class is added */
+            #nav-menu.active {
+                display: flex;
+            }
+
+            #nav-menu li {
+                margin: 0;
+                padding: 10px 20px;
+            }
+
+            #nav-menu li a {
+                display: block;
+            }
+        }
+
+        /* Container for the dropdown */
+        .service {
+            background-color: #0b0c10;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+            margin: 20px auto;
+            width: 80%;
+            max-width: 500px;
+        }
+
+        /* Label styling */
+        label {
+            font-size: 1.2rem;
+            color: #66fcf1;
+            margin-right: 15px;
+        }
+
+        /* Styling for the select dropdown */
+        select {
+            padding: 10px;
+            font-size: 1rem;
+            background-color: #c5c6c7;
+            border: none;
+            border-radius: 5px;
+            color: #1f2833;
+        }
+
+        /* Hover effect for the select dropdown */
+        select:hover {
+            background-color: #66fcf1;
+            color: #0b0c10;
+        }
+
+        /* Button styling */
+        button {
+            margin-top: 20px;
+            padding: 12px 25px;
+            font-size: 1rem;
+            color: #0b0c10;
+            background-color: #66fcf1;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        /* Button hover effect */
+        button:hover {
+            background-color: #45a29e;
+        }
+
+        /* Service heading */
+        .service-title {
+            font-size: 1.5rem;
+            color: #66fcf1;
+            margin-bottom: 10px;
+        }
+
+        /* Footer styling */
+        footer {
+            background-color: #0b0c10;
+            color: #66fcf1;
+            text-align: center;
+            padding: 15px;
+            margin-top: auto;
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="logo">Ashish Server</div>
+        <div class="menu-icon" onclick="toggleMenu()">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <ul id="nav-menu">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="service.html">Services</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Service 1 -->
+    <div class="service">
+        <div class="service-title">Hosting Panel</div>
+        <label for="serverSelect1">Select a Panel:</label>
+        <select id="serverSelect1">
+            <option value="panel1">Public Panel</option>
+            <option value="panel2">Private Panel</option>
+            <option value="panel3">Personal</option>
+        </select>
+        <button onclick="redirectToServer(1)">Go to Server</button>
+    </div>
+
+    <!-- Service 2 -->
+    <div class="service">
+        <div class="service-title">Facebook Tool</div>
+        <label for="serverSelect2">Select Option:</label>
+        <select id="serverSelect2">
+            <option value="messenger-tool-server1">Tools</option>
+            <option value="messenger-tool-server2">Booster</option>
+        </select>
+        <button onclick="redirectToServer(2)">Go to Server</button>
+    </div>
+
+    <!-- Service 3 -->
+    <div class="service">
+        <div class="service-title">API</div>
+        <label for="serverSelect3">Select a API:</label>
+        <select id="serverSelect3">
+            <option value="devotion">Devotional</option>
+            <option value="anime">Anime</option>
+            <option value="18+">18+</option>
+        </select>
+        <button onclick="redirectToServer(3)">Go to API</button>
+    </div>
+     <!-- Service 4 -->
+    <div class="service">
+        <div class="service-title">Other Tool</div>
+        <label for="serverSelect4">Select a Tool:</label>
+        <select id="serverSelect4">
+            <option value="auto-share1">AI Chatbot</option>
+            <option value="auto-share2">Ringtone Downloader</option>
+            <option value="auto-share3">Games</option>
+        </select>
+        <button onclick="redirectToServer(4)">Go to Server</button>
+    </div>
+
+    <!-- Footer Section -->
+    <footer>
+        &copy; 2022 - 2024 Ashish Server All rights reserved.
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            var menu = document.getElementById("nav-menu");
+            menu.classList.toggle("active");
+        }
+
+        function redirectToServer(serviceNumber) {
+            let selectedServer;
+            if (serviceNumber === 1) {
+                selectedServer = document.getElementById("serverSelect1").value;
+                if (selectedServer === "panel1") {
+                    window.location.href = "http://139.99.203.99/";
+                } else if (selectedServer === "panel2") {
+                    window.location.href = "http://107.172.50.150/";
+                } else if (selectedServer === "panel3") {
+                    window.location.href = "http://51.161.207.163/";
+                }
+                
+            } else if (serviceNumber === 2) {
+                selectedServer = document.getElementById("serverSelect2").value;
+                if (selectedServer === "messenger-tool-server1") {
+                    window.location.href = "fb.html";
+                } else if (selectedServer === "messenger-tool-server2") {
+                    window.location.href = "booster.html";
+                }
+            } else if (serviceNumber === 3) {
+    selectedServer = document.getElementById("serverSelect3").value;
+    if (selectedServer === "devotion") {
+        window.location.href = "devotion.html";
+    } else if (selectedServer === "anime") {
+        window.location.href = "anime.html";
+    } else if (selectedServer === "18+") {  // <-- corrected to 'selectedServer'
+        window.location.href = "comingsoon.html";
+    }
+} else if (serviceNumber === 4) {
+                selectedServer = document.getElementById("serverSelect4").value;
+                if (selectedServer === "auto-share1") {
+                    window.location.href = "http://aus.darkester.online:52656/chatbot";
+                } else if (selectedServer === "auto-share2") {
+                    window.location.href = "http://aus.darkester.online:52656/spotify";
+                } else if (selectedServer === "auto-share3") {
+                    window.location.href = "games.html";
+                }
+            }
+        }
+    </script>
+
+</body>
+</html>

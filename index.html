@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ashish Server</title>
+    <style>
+      /* Resetting default margins and padding */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      /* Applying Dark Theme */
+      body {
+        font-family: "Poppins", sans-serif;
+        background-color: #121212;
+        color: #e0e0e0;
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+        padding: 0;
+        margin: 0;
+      }
+
+      header {
+        background-color: #1e1e1e;
+        padding: 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+      }
+
+      header h1 {
+        font-size: 1.8rem;
+        color: #fff;
+      }
+
+      /* Navigation Styles */
+      nav ul {
+        display: flex;
+        list-style-type: none;
+      }
+
+      nav ul li {
+        margin-left: 20px;
+      }
+
+      nav ul li a {
+        text-decoration: none;
+        color: #fff;
+        font-weight: bold;
+        transition: color 0.3s ease;
+      }
+
+      nav ul li a:hover {
+        color: #00adb5;
+      }
+
+      .menu-icon {
+        display: none;
+        cursor: pointer;
+      }
+
+      main {
+        flex-grow: 1;
+        padding: 50px 20px;
+      }
+
+      /* Hero Section */
+      .hero {
+        text-align: center;
+        padding: 50px;
+        background: linear-gradient(120deg, #00adb5, #393e46);
+        border-radius: 15px;
+        margin-bottom: 40px;
+      }
+
+      .hero h2 {
+        font-size: 2.5rem;
+        color: #fff;
+      }
+
+      .hero p {
+        font-size: 1.2rem;
+        color: #fff;
+        margin-top: 20px;
+        opacity: 0.8;
+      }
+
+      .btn-primary {
+        display: inline-block;
+        margin-top: 20px;
+        padding: 12px 25px;
+        background-color: #00adb5;
+        color: white;
+        text-decoration: none;
+        border-radius: 30px;
+        transition: background 0.3s ease;
+      }
+
+      .btn-primary:hover {
+        background-color: #00c5d6;
+      }
+
+      /* Services Section */
+      .services-section {
+        display: flex;
+        justify-content: space-around;
+        margin-top: 40px;
+      }
+
+      .service-box {
+        background-color: #1f1f1f;
+        padding: 30px;
+        border-radius: 15px;
+        text-align: center;
+        width: 30%;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+      }
+
+      .service-box h3 {
+        color: #00adb5;
+        font-size: 1.4rem;
+        margin-bottom: 10px;
+      }
+
+      .service-box p {
+        color: #b8b8b8;
+      }
+
+      .service-box:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+      }
+
+      /* Testimonials */
+      .testimonial-section {
+        margin-top: 60px;
+        text-align: center;
+      }
+
+      .testimonial-section h2 {
+        color: #fff;
+        font-size: 2rem;
+        margin-bottom: 30px;
+      }
+
+      .testimonial-card {
+        background-color: #252525;
+        padding: 20px;
+        border-radius: 15px;
+        width: 70%;
+        margin: 0 auto;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+        transition: box-shadow 0.3s ease;
+      }
+
+      .testimonial-card:hover {
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+      }
+
+      .testimonial-card p {
+        color: #d4d4d4;
+        font-style: italic;
+      }
+
+      .testimonial-client {
+        margin-top: 10px;
+        color: #00adb5;
+        font-weight: bold;
+      }
+
+      /* Footer */
+      footer {
+        background-color: #1e1e1e;
+        padding: 20px;
+        text-align: center;
+        color: #888;
+        font-size: 0.9rem;
+      }
+
+      footer a {
+        color: #00adb5;
+        text-decoration: none;
+        transition: color 0.3s ease;
+      }
+
+      footer a:hover {
+        color: #00c5d6;
+      }
+
+      @media (max-width: 768px) {
+        .services-section {
+          flex-direction: column;
+          align-items: center;
+        }
+
+        .service-box {
+          width: 90%;
+          margin-bottom: 20px;
+        }
+
+        .testimonial-card {
+          width: 90%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Ashish Server</h1>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="service.html">Services</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <!-- Hero Section -->
+      <section class="hero">
+        <h2>Welcome to Ashish Server</h2>
+        <p>
+          Delivering premium services to enhance your business, from API
+          integration to VPS hosting.
+        </p>
+        <a href="service.html" class="btn-primary">Explore Services</a>
+      </section>
+
+      <!-- Services Section -->
+      <section id="services" class="services-section">
+        <div class="service-box">
+          <h3>Facebook Tools</h3>
+          <p>Enhance your social media management with our automation tools.</p>
+        </div>
+        <div class="service-box">
+          <h3>APIs</h3>
+          <p>
+            Seamlessly integrate our APIs for superior application performance.
+          </p>
+        </div>
+        <div class="service-box">
+          <h3>VPS Hosting</h3>
+          <p>
+            Virtual Private Servers that offer reliability and power for
+            advanced users.
+          </p>
+        </div>
+      </section>
+
+      <!-- Testimonials Section -->
+      <section id="testimonials" class="testimonial-section">
+        <h2>What Our Clients Say</h2>
+        <div class="testimonial-card">
+          <p>
+            "Hosting Panel has been a game-changer for our online business!"
+          </p>
+          <div class="testimonial-client">- Spyder</div>
+        </div>
+        <div class="testimonial-card" style="margin-top: 20px">
+          <p>
+            "Reliable and affordable hosting with excellent customer service."
+          </p>
+          <div class="testimonial-client">- Sukhi</div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+      <p>&copy; 2024 - 2024 Ashish. All rights reserved.</p>
+      <p>
+        Contact:
+        <a href="mailto:admin@darkester.online">admin@ashish.online</a>
+      </p>
+    </footer>
+  </body>
+</html>

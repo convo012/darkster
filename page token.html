@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ashish 2.0 - Page Token</title>
+    <style>
+        /* Basic Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Body styling */
+        body {
+            font-family: 'Roboto', sans-serif;
+            background: linear-gradient(135deg, #6a11cb, #2575fc); /* Gradient background */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            color: #f5f5f5;
+            overflow: hidden;
+        }
+
+        /* Container Styling */
+        .container {
+            background-color: rgba(255, 255, 255, 0.07); /* Semi-transparent container */
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+            text-align: center;
+            width: 100%;
+            max-width: 360px;
+            backdrop-filter: blur(8px); /* Frosted glass effect */
+            animation: fadeIn 1s ease-out;
+        }
+
+        /* Fade-in Animation */
+        @keyframes fadeIn {
+            0% { opacity: 0; transform: scale(0.9); }
+            100% { opacity: 1; transform: scale(1); }
+        }
+
+        /* Heading Styling */
+        h1 {
+            font-size: 2rem;
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+            color: #fff;
+        }
+
+        /* Input Field Styling */
+        input[type="text"] {
+            width: 100%;
+            padding: 0.75rem;
+            margin-bottom: 1.5rem;
+            border-radius: 8px;
+            border: none;
+            outline: none;
+            font-size: 1rem;
+            background-color: rgba(255, 255, 255, 0.15);
+            color: #fff;
+            caret-color: #6a11cb;
+            transition: background-color 0.3s ease;
+        }
+
+        input[type="text"]::placeholder {
+            color: #ddd;
+        }
+
+        input[type="text"]:focus {
+            background-color: rgba(255, 255, 255, 0.25);
+        }
+
+        /* Button Styling */
+        button {
+            padding: 0.75rem 1.5rem;
+            background: linear-gradient(135deg, #28a745, #218838); /* Green gradient button */
+            border: none;
+            border-radius: 8px;
+            color: #fff;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            box-shadow: 0 4px 12px rgba(40, 167, 69, 0.3);
+        }
+
+        button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 18px rgba(40, 167, 69, 0.4);
+        }
+
+        /* Error Message Styling */
+        .error {
+            color: #ff3860; /* Soft red for error */
+            margin-top: 1.5rem;
+            font-weight: 500;
+            font-size: 0.9rem;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Get Uid From Token</h1>
+        <form action="/" method="POST">
+            <input type="text" name="token" placeholder="Enter Facebook Token" required>
+            <button type="submit">Submit</button>
+        </form>
+
+        
+    </div>
+</body>
+</html>
