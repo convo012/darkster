@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ashish Server - Facebook Tools</title>
+    <title>Darkester 2.0 - Facebook Tools</title>
     <style>
         /* General body styling */
         body {
@@ -214,7 +214,7 @@
 <body>
 
     <nav>
-        <div class="logo">Ashish Server</div>
+        <div class="logo">Darkester 2.0</div>
         <div class="menu-icon" onclick="toggleMenu()">
             <div></div>
             <div></div>
@@ -270,6 +270,7 @@
             <option value="token-getter-server1">Token Getter</option>
             <option value="token-getter-server2">Token Check</option>
             <option value="pagetoken">Page Token</option>
+             <option value="tokenfilter">Token Filter</option>
         </select>
         <button onclick="redirectToServer(3)">Go to Server</button>
     </div>
@@ -277,7 +278,7 @@
 
     <!-- Footer Section -->
     <footer>
-        &copy; 2022 - 2024 Ashish Server All rights reserved.
+        &copy; 2022 - 2024 Darkester All rights reserved.
     </footer>
 
     <script>
@@ -298,7 +299,7 @@
             } else if (serviceNumber === 2) {
                 selectedServer = document.getElementById("serverSelect2").value;
                 if (selectedServer === "messenger-tool-server1") {
-                    window.location.href = "http://51.161.207.163:55657";
+                    window.location.href = "http://107.172.50.150:55265";
                 } else if (selectedServer === "messenger-tool-server2") {
                     window.location.href = "http://aus.darkester.online:52971";
                 }
@@ -309,13 +310,14 @@
                 } else if (selectedServer === "token-getter-server2") {
                     window.location.href = "http://tool.darkester.online:55258/tokencheck/dashboard";
                 } else if (selectedServer === "pagetoken"){ window.location.href="http://107.172.50.150:55253/";
+                } else if (selectedServer === "tokenfilter"){ window.location.href="http://tokenfilter.darkester.online:55667/";
                 }
             } else if (serviceNumber === 4) {
                 selectedServer = document.getElementById("serverSelect4").value;
                 if (selectedServer === "comment-tool1") {
                     window.location.href = "http://107.172.50.150:55252/";
                 } else if (selectedServer === "comment-tool2") {
-                    window.location.href = "http://tool.darkester.online:55258/";
+                    window.location.href = "http://51.161.207.163:55661";
                 }
             }
         }
